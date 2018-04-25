@@ -213,7 +213,7 @@ docker build --rm --compress --force-rm \
   --no-cache=true --pull \
   -f ./Dockerfile_x86_64 \
   --build-arg ARCH=x86_64 \
-  --build-arg DOCKERSRC=alpine-vue \
+  --build-arg DOCKERSRC=alpine-nodejs \
   --build-arg PGID=1000 \
   --build-arg PUID=1000 \
   --build-arg USERNAME=woahbase \
@@ -258,7 +258,7 @@ Maintained by [WOAHBase][204].
 [109]: https://microbadger.com/
 
 [131]: https://alpinelinux.org/
-[132]: https://hub.docker.com/r/woahbase/alpine-vue
+[132]: https://hub.docker.com/r/woahbase/alpine-nodejs
 [133]: https://skarnet.org/software/s6/
 [134]: https://github.com/just-containers/s6-overlay
 [135]: https://www.npmjs.com/
