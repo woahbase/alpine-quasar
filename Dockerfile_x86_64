@@ -1,0 +1,13 @@
+ARG ARCH=frommakefile
+ARG DOCKERSRC=frommakefile
+ARG USERNAME=frommakefile
+#
+FROM ${USERNAME}/${DOCKERSRC}:${ARCH}
+#
+RUN set -xe \
+    && npm install -g quasar-cli cordova \
+    && rm -rf /var/cache/apk/* /tmp/*
+# VOLUME /home/alpine/project/ # specify at runtime
+USER alpine
+WORKDIR /home/alpine/project/
+ENTRYPOINT ["quasar"]
