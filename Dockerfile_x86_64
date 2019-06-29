@@ -4,6 +4,9 @@ ARG USERNAME=frommakefile
 #
 FROM ${USERNAME}/${DOCKERSRC}:${ARCH}
 #
+# building from vue which drops user to 
+# alpine so need to elevate it
+USER root
 RUN set -xe \
     && npm install -g @quasar/cli cordova \
     && rm -rf /var/cache/apk/* /tmp/*
