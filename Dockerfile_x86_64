@@ -5,7 +5,7 @@ ARG USERNAME=frommakefile
 FROM ${USERNAME}/${DOCKERSRC}:${ARCH}
 #
 RUN set -xe \
-    && npm install -g vue-cli quasar-cli cordova \
+    && npm install -g @quasar/cli cordova \
     && rm -rf /var/cache/apk/* /tmp/*
 # VOLUME /home/alpine/project/ # specify at runtime
 USER alpine
